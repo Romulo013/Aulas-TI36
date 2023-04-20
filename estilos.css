@@ -1,0 +1,57 @@
+/* o import tem que ser o primeiro comando */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* serve para poder embarcar um arquivo de fonte, para que não precise depender do usuario ter */
+@font-face {
+    font-family: Jester;
+    src: url(Jester.ttf);
+}
+body{
+    color: midnightblue;
+    background-color: #99e5a3;
+    font-family: 'Roboto', sans-serif; 
+}
+
+h1{
+    color:#db0e0e;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 2px 2px 3px black;
+    font-family: Jester, cursive;
+    background-color: #dbdb49;
+}
+
+p{
+    text-align: left; /* alinhamento */
+    text-indent: 1em; /* indentação - recuo de primeira linha */
+    line-height: 1.2em; /* entrelinha */
+    font-size: 17px; /* tamanho da fonte */
+     
+}
+
+/* formatação dos links */
+/* a:link mostra os que ainda não foram visitados, e o a:visited os que ja foram */
+
+/* link não visitado */
+a:link{
+    color: chocolate;
+    text-decoration: none;
+}
+
+/* link visitado */
+a:visited{
+    color: brown;
+}
+
+/* link com cursor em cima */
+a:hover{
+    color: teal;
+}
+
+/* link enquanto clicado */
+a:active{
+    color: magenta;
+}
+
