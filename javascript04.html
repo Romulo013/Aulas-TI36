@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de comparação</title>
+</head>
+<body>
+    <input type="text" id="numero1">
+    <input type="text" id="numero2">
+    <button onclick="compara()">Comparar</button>
+    <p id="maior">Cliqueno no botão para comparar os valores</p>
+    <p id="menor"></p>
+    <p id="maiorigual"></p>
+    <p id="menorigual"></p>
+    <p id="igual"></p>
+    <p id="diferente"></p>
+    <p id="igual2"></p>
+    <p id="diferente2"></p>
+
+    <script>
+        function compara(){
+            let num1 = Number(document.getElementById("numero1").value);
+            let num2 = document.getElementById("numero2").value;
+
+            let resultado = num1 > num2;
+            document.getElementById("maior").innerHTML = "Maior: " + resultado;
+
+            resultado = num1 < num2;
+            document.getElementById("menor").innerHTML = "Menor: " + resultado;
+
+            resultado = num1 >= num2;
+            document.getElementById("maiorigual").innerHTML = "Maior ou Igual: " + resultado;
+
+            resultado = num1 <= num2;
+            document.getElementById("menorigual").innerHTML = "Menor ou Igual: " + resultado;
+
+            resultado = num1 == num2; // compara só valor
+            document.getElementById("igual").innerHTML = "Igual: " + resultado;
+
+            resultado = num1 != num2;
+            document.getElementById("diferente").innerHTML = "Diferente: " + resultado;
+
+            resultado = num1 === num2; // compara valor E tipo
+            document.getElementById("igual2").innerHTML = "Igual (Valor E Tipo): " + resultado;
+
+            resultado = num1 !== num2; // nesse caso sera comparado tipo ou valor
+            document.getElementById("diferente2").innerHTML = "Diferente (Valor ou Tipo): " + resultado;
+            
+        }
+
+    </script>
+
+    <h1>Desvio Condicional</h1>
+
+    <input type="text" id="hora">
+    <button onclick="saudacao()">Clique</button>
+    <p id="mensagem"></p>
+
+    <script>
+        function saudacao(){
+            let hora = document.getElementById("hora").value;
+            let msg;
+
+            if (hora < 12){
+            msg = "Bom dia!"
+            } else if (hora < 18) {
+                msg = "Boa tarde!"
+            } else{
+                msg = "Boa noite!"
+            }
+
+            document.getElementById("mensagem").innerText = msg;
+        }
+    </script>
+
+</body>
+</html>
